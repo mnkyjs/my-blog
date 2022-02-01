@@ -1,0 +1,11 @@
+.post-card {
+  height: 360px;
+  width: 290px;
+}
+
+.post-title {
+  max-width: 20ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

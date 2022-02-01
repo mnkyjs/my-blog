@@ -1,0 +1,28 @@
+<div *ngFor="let options of respOptions"
+     class="flex-column align-items-center text-center vw-90 mx-auto"
+     [ngClass]="options.viewClasses">
+  <h1 class="mb-5"
+      [ngClass]="options.titleClasses">
+    <span class="font-weight-bold">Jane's</span>
+    Blog
+  </h1>
+  <div class="d-flex vw-90"
+       [ngClass]="{'justify-content-center flex-wrap': !options.displayInColumn,  'flex-column align-items-center': options.displayInColumn}">
+    <div *ngFor="let page of links$ | async"
+         class="card post-card m-3">
+      <div class="card-img-top bg-dark">
+        <i class="far fa-newspaper fa-4x m-5 text-white"></i>
+      </div>
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title post-title"
+            [title]="page.title">{{page.title}}</h5>
+        <p class="card-text post-description flex-grow-1">{{page['description']}}</p>
+        <a class="btn btn-outline-dark align-self-center"
+           [routerLink]="page.route">
+          <i class="fa-lg mr-1 far fa-eye"></i>
+          Read
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
