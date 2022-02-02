@@ -1,46 +1,46 @@
 [
   {
-    "name": "Soduko",
+    "name": "Venue Registration Tool - Frontend",
     "stack": {
       "name": "Angular",
       "iconClasses": "fab fa-angular"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "sourceUrl": "https://github.com",
-    "previewUrl": "https://github.com",
+    "description": "A tool to better manage event administration for e.g. a clubs registration and protocols.",
+    "sourceUrl": "https://gitlab.com/spaghetti-coders/vrt-frontend",
+    "previewUrl": "https://event-planer.uk.to/auth/login?returnUrl=%2F",
     "featured": true
   },
   {
-    "name": "E-commerce Store",
+    "name": "Paintball-Bracket-System API",
     "stack": {
-      "name": "React",
-      "iconClasses": "fab fa-react"
+      "name": "Csharp",
+      "iconClasses": "fab fa-dev"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "sourceUrl": "https://github.com",
-    "previewUrl": "https://github.com",
+    "description": "An API to manage and create paintball clashes",
+    "sourceUrl": "https://gitlab.com/mnkyjs/Paintball-Bracket-System-API",
+    "previewUrl": "https://clashplaner.uk.to/",
     "featured": true
   },
   {
-    "name": "Algorithm Visualization App",
+    "name": "Paintball-Bracket-System SPA",
     "stack": {
       "name": "Angular",
       "iconClasses": "fab fa-angular"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "sourceUrl": "https://github.com",
-    "previewUrl": "https://github.com",
+    "description": "A website to manage and create paintball clashes",
+    "sourceUrl": "https://gitlab.com/mnkyjs/Paintball-Bracket-System-SPA",
+    "previewUrl": "https://clashplaner.uk.to/",
     "featured": true
   },
   {
-    "name": "Time Tracking CLI App",
+    "name": "Tournament Generator",
     "stack": {
-      "name": "Node.js",
-      "iconClasses": "fab fa-node-js"
+      "name": "Nest.js/Angular",
+      "iconClasses": "fab fa-dev"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "sourceUrl": "https://github.com",
-    "previewUrl": "https://github.com",
+    "description": "An API implemented in Nest.js in conjunction with an Angular client to create and manage tournaments. Here a monorepo was implemented with NX.",
+    "sourceUrl": "https://gitlab.com/mnkyjs/bracket-generator",
+    "previewUrl": "",
     "featured": true
   }
 ]
