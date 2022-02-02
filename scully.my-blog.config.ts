@@ -1,7 +1,7 @@
 import { ScullyConfig } from '@scullyio/scully';
 
 /** this loads the default render plugin, remove when switching to something else. */
-import '@scullyio/scully-plugin-puppeteer'
+import '@scullyio/scully-plugin-puppeteer';
 
 export const config: ScullyConfig = {
   projectRoot: "./src",
@@ -12,9 +12,11 @@ export const config: ScullyConfig = {
     '/blog/:slug': {
       type: 'contentFolder',
       slug: {
-        folder: "./blog"
+        folder: './blog'
       }
     },
   },
-  puppeteerLaunchOptions: {args: ['--no-sandbox', '--disable-setuid--sandbox']}
+  puppeteerLaunchOptions: {
+    args: ['--no-sandbox', '--disable-setuid--sandbox'],
+  },
 };
