@@ -1,4 +1,4 @@
-image: node:14.17
+image: buildkite/puppeteer:9.1.1
 
 # == GENERAL SETUP ===================================================================================================
 variables:
@@ -54,11 +54,10 @@ lint:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
 
 
-.jest:
+jest:
   stage: test
   extends: .dependencies_cache
   script:
-    - npm run postinstall
     - npm run test:ci
   rules:
     - if: '$CI_COMMIT_TAG'
