@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { BlogLandingComponent } from './blog-landing.component';
 
@@ -8,7 +10,8 @@ describe('BlogLandingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BlogLandingComponent]
+      declarations: [BlogLandingComponent],
+      imports: [HttpClientTestingModule, RouterTestingModule]
     })
       .compileComponents();
   });

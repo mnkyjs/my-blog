@@ -1,4 +1,8 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ScullyContentModule } from '@scullyio/ng-lib';
+import { HeaderComponent } from '../../core/header/header.component';
 
 import { BlogComponent } from './blog.component';
 
@@ -8,7 +12,8 @@ describe('BlogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [BlogComponent]
+      declarations: [BlogComponent, HeaderComponent],
+      imports: [RouterTestingModule, ScullyContentModule, HttpClientTestingModule]
     })
       .compileComponents();
   }));
