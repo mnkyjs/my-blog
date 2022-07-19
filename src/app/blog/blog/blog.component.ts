@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 declare var ng: any;
 
@@ -12,6 +11,6 @@ declare var ng: any;
 
 })
 export class BlogComponent {
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor() {
   }
 }
