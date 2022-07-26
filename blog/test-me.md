@@ -1,12 +1,15 @@
 ---
 layout: blog
-title: Test me
-description: Uff, new Topic
+title: 'Test me'
+description: 'Uff, new Topic'
 published: false
 date: 2022-07-19T20:52:01.927Z
-image: https://avatars.discourse-cdn.com/v4/letter/l/74df32/45.png
+image: 'https://avatars.discourse-cdn.com/v4/letter/l/74df32/45.png'
 rating: 2
+slugs:
+- ___UNPUBLISHED___l7ipz839_kHF2Utu4Ooackmqfk1thXZ7lZHr8zHVw
 ---
+
 Yes, finally
 
 ```typescript
@@ -14,3 +17,4 @@ Yes, finally
   sick: string;
 }
 ```
+

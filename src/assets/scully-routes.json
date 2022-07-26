@@ -12,17 +12,6 @@
     "route": "/blog"
   },
   {
-    "route": "/blog/___UNPUBLISHED___kyx10zn6_69bDOcvg4cC9Qa5f7zNVOuULfFjSPrav",
-    "title": "2022-01-27-blog",
-    "description": "blog description",
-    "published": false,
-    "slugs": [
-      "___UNPUBLISHED___kyx10zn6_69bDOcvg4cC9Qa5f7zNVOuULfFjSPrav"
-    ],
-    "slug": "___UNPUBLISHED___kyx10zn6_69bDOcvg4cC9Qa5f7zNVOuULfFjSPrav",
-    "sourceFile": "2022-01-27-blog.md"
-  },
-  {
     "route": "/blog/___UNPUBLISHED___kz5qbbrv_TNDCprf8WKGGNc6y4Ljq4Ozep9k4AsBF",
     "title": "Blog Post 1",
     "description": "Your first blog post",
@@ -61,5 +50,17 @@
     ],
     "slug": "___UNPUBLISHED___kyx10zna_zeecsEEXyoWyLmZU83aLzY8OYNHGHlPx",
     "sourceFile": "blog-post-3.md"
+  },
+  {
+    "route": "/blog/___UNPUBLISHED___l7ipz839_kHF2Utu4Ooackmqfk1thXZ7lZHr8zHVw",
+    "title": "Test me",
+    "layout": "blog",
+    "description": "Uff, new Topic",
+    "published": false,
+    "date": "2022-07-19T20:52:01.927Z",
+    "image": "https://avatars.discourse-cdn.com/v4/letter/l/74df32/45.png",
+    "rating": 2,
+    "slug": "___UNPUBLISHED___l7ipz839_kHF2Utu4Ooackmqfk1thXZ7lZHr8zHVw",
+    "sourceFile": "test-me.md"
   }
 ]
