@@ -1,7 +1,7 @@
 ---
 title: Blog Post 1
 description: Your first blog post
-published: false
+published: true
 tags:
   - Angular
   - Testing
