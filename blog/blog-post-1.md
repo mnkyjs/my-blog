@@ -1,10 +1,13 @@
 ---
-title: 'Blog Post 1'
-description: 'Your first blog post'
+title: Blog Post 1
+description: Your first blog post
 published: false
-tags: ['Angular', 'Testing']
+tags:
+  - Angular
+  - Testing
 slugs:
-- ___UNPUBLISHED___kz5qbbrv_TNDCprf8WKGGNc6y4Ljq4Ozep9k4AsBF
+  - ___UNPUBLISHED___kz5qbbrv_TNDCprf8WKGGNc6y4Ljq4Ozep9k4AsBF
+date: 2022-09-01T08:20:24.039Z
 ---
 
 ### Blog Post 1
