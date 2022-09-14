@@ -9,10 +9,10 @@
       Me
     </h1>
     <div *ngFor="let par of bio.about">
-      <h4 *ngIf="!options.useSmallerHeadings"
-          class="mb-4">{{par}}</h4>
-      <h5 *ngIf="options.useSmallerHeadings"
-          class="mb-4">{{par}}</h5>
+      <p *ngIf="!options.useSmallerHeadings"
+         class="mb-4 h4">{{par}}</p>
+      <p *ngIf="options.useSmallerHeadings"
+         class="mb-4 h5">{{par}}</p>
     </div>
   </div>
 </div>
