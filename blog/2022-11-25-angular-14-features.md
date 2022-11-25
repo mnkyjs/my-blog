@@ -18,8 +18,6 @@ Standalone Components are intended to facilitate the introduction and promote co
 
 This makes it both clearer and easier to understand. Plus the biggest benefit is that the component already brings its own dependencies and nothing more needs to be declared.
 
-Translated with www.DeepL.com/Translator (free version)
-
 ### Inject
 
 Another very cool new feature is that the injection no longer has to take place in the constructor. It can also be done outside the constructor.
