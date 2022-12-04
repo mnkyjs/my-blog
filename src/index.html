@@ -1,35 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>mnky-js Blog</title>
-    <base href="/">
-    <meta content="width=device-width, initial-scale=1"
-          name="viewport">
-    <link href="favicon.ico"
-          rel="icon"
-          type="image/x-icon">
-    <link href="https://fonts.googleapis.com"
-          rel="preconnect">
-    <link crossorigin
-          href="https://fonts.gstatic.com"
-          rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap"
-          rel="stylesheet">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
-  <body>
-    <app-root></app-root>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
-          if (!user) {
-            window.netlifyIdentity.on('login', () => {
-              document.location.href = '/admin/';
-            });
-          }
-        });
-      }
-    </script>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>mnky-js Blog</title>
+        <base href="/">
+        <meta content="width=device-width, initial-scale=1"
+              name="viewport">
+        <meta
+            content="This is my personal developer blog. Here you get some information about
+myself and the projects I'm working on. Also from time to time I write some Blog posts about different topics"
+            name="description">
+        <meta content="noindex"
+              name="robots">
+        <link href="favicon.ico"
+              rel="icon"
+              type="image/x-icon">
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+    <body>
+        <app-root></app-root>
+        <script>
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on('init', user => {
+                    if (!user) {
+                        window.netlifyIdentity.on('login', () => {
+                            document.location.href = '/admin/';
+                        });
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>
