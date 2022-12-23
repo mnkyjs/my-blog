@@ -35,8 +35,6 @@ Now that you've set up your test environment, you're ready to start writing test
 
 Once you've written your tests, you'll need to run them to see if they're working correctly. You can use the Karma test runner to run your tests in a browser or on the command line. Alternatively, you can use the `ng test` command to run your tests directly from the command line.
 
-
-
 ```typescript
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
@@ -81,14 +79,9 @@ describe('OrderFormComponent', () => {
     expect(component.form.valid).toBeFalsy();
   });
 });
-
 ```
 
-
-
 This test verifies that the `OrderFormComponent` component can be created, and it also tests the `totalPrice` and `form` properties of the component. The `totalPrice` test verifies that the component calculates the total price correctly based on the `quantity` and `price` properties, and the `form` test verifies that the form is valid when all of the required fields are filled in, and invalid when the `name` field is left blank.
-
-
 
 ```typescript
 import { TestBed } from '@angular/core/testing';
@@ -133,7 +126,6 @@ describe('OrderService', () => {
     httpMock.verify();
   });
 });
-
 ```
 
 The integration test for the `OrderService` service is designed to test the behavior of the `submitOrder` method, which is responsible for submitting an order to the server via an HTTP request. The test uses the `HttpTestingController` to mock the HTTP request, and it verifies that the request is sent with the correct method, URL, and payload, and that the correct response is returned. The test also uses the `TestBed` utility to set up the testing environment, and it injects instances of the `OrderService` and `HttpTestingController` into the test using the `inject` function.
@@ -141,6 +133,8 @@ The integration test for the `OrderService` service is designed to test the beha
 Testing is an important part of the development process, and it's especially important when working with Angular applications. Angular provides a number of tools and features to make it easy for developers to write and run tests for their applications.
 
 There are several types of tests that you can write for an Angular application, including unit tests, integration tests, and end-to-end (E2E) tests. Unit tests focus on individual components or services, and are designed to test the smallest units of your application. Integration tests focus on testing how different parts of your application work together. E2E tests simulate the interaction of a user with your application, and are designed to test the overall functionality of your application.
+
+## Summary
 
 To set up your test environment for Angular, you'll need to use tools such as Karma (a test runner), Jasmine (a testing framework), and Protractor (an E2E testing framework). These tools will help you write and run your tests.
 
