@@ -2,9 +2,7 @@
 layout: blog
 title: "TypeScript Tips: Choosing Between Interfaces and Types"
 description: Understand the differences between interfaces and types in
-  TypeScript, and when to use each of them. This article covers the pros and
-  cons of using interfaces and types, and provides tips on defining types
-  effectively.
+  TypeScript, and when to use each of them.
 published: true
 date: 2023-01-07T08:19:21.021Z
 ---
