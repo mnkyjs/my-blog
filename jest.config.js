@@ -1,11 +1,9 @@
-const { pathsToModuleNameMapper } = require('ts-jest');
-const { paths } = require('./tsconfig.json').compilerOptions;
-
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-  preset: 'jest-preset-angular',
-  moduleNameMapper: pathsToModuleNameMapper(paths, { prefix: '<rootDir>' }),
-  globalSetup: 'jest-preset-angular/global-setup',
-  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
+    preset: 'jest-preset-angular',
+    setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
+    globalSetup: 'jest-preset-angular/global-setup',
+    moduleDirectories: ['node_modules', '<rootDir>'],
+    transformIgnorePatterns: ['node_modules/(?!@angular|rxjs)'],
+    collectCoverage: true,
+    coverageDirectory: '<rootDir>/coverage/',
 };
-
