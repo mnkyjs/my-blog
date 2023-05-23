@@ -48,7 +48,7 @@ jobs:
       - name: Lint
         uses: actions/cache@v3
         with:
-          key: node_modules
+          key: modules-${{ hashFiles('package-lock.json') }}
           path: node_modules
       - run: npm run lint
 
@@ -69,7 +69,7 @@ jobs:
       - name: Run Jest Tests
         uses: actions/cache@v3
         with:
-          key: node_modules
+          key: modules-${{ hashFiles('package-lock.json') }}
           path: node_modules
       - run: npm run test:ci
 
@@ -90,7 +90,7 @@ jobs:
       - name: Build Apps
         uses: actions/cache@v3
         with:
-          key: node_modules
+          key: modules-${{ hashFiles('package-lock.json') }}
           path: node_modules
       - run: |
           npm run build
