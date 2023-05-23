@@ -1,0 +1,113 @@
+name: GitHub Actions
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  tags:
+    - '*'
+
+env:
+  FF_USE_FASTZIP: "true"
+  ARTIFACT_COMPRESSION_LEVEL: "fast"
+  CACHE_COMPRESSION_LEVEL: "fast"
+
+jobs:
+  install_dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm ci
+
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: install_dependencies
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Lint
+        run: npm run lint
+
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+
+  jest:
+    runs-on: ubuntu-latest
+    needs: install_dependencies
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Run Jest Tests
+        run: npm run test:ci
+
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+
+  build_apps:
+    runs-on: ubuntu-latest
+    needs: install_dependencies
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Build Apps
+        run: |
+          npm run build
+          npm run scully
+
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    artifacts:
+      paths:
+        - dist
+      expire-in: 1 week
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build_apps
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    steps:
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy
+        run: |
+          ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "rm -rf /* && mkdir /static"
+          scp -o StrictHostKeyChecking=no -P ${{ secrets.SSH_PORT }} -r dist/static/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/static
+
+    env:
+      SSH_PORT: ${{ secrets.SSH_PORT }}
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+
+    manual_review:
+      if: github.event_name == 'pull_request' || github.event_name == 'push'
