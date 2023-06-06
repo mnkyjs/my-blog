@@ -7,7 +7,7 @@
     },
     "description": "A tool to better manage event administration for e.g. a clubs registration and protocols.",
     "sourceUrl": "https://gitlab.com/spaghetti-coders/vrt-frontend",
-    "previewUrl": "https://event-planer.uk.to/auth/login?returnUrl=%2F",
+    "previewUrl": "https://vrt.mnky-js.com/",
     "featured": true
   },
   {
@@ -41,6 +41,6 @@
     "description": "An API implemented in Nest.js in conjunction with an Angular client to create and manage tournaments. Here a monorepo was implemented with NX.",
     "sourceUrl": "https://gitlab.com/mnkyjs/bracket-generator",
     "previewUrl": "",
-    "featured": true
+    "featured": false
   }
 ]
