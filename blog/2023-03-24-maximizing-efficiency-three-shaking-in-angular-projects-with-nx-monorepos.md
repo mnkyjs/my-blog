@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Maximizing Efficiency Three-Shaking in Angular Projects with NX Monorepos
+title: Maximizing Efficiency Three-Shaking in Angular Projects
 description: Three shaking problems with nx mono repos and Angular applications
 published: true
 date: 2023-03-24T09:30:00.021Z
