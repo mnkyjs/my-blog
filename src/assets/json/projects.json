@@ -18,7 +18,7 @@
     },
     "description": "An API to manage and create paintball clashes",
     "sourceUrl": "https://gitlab.com/mnkyjs/Paintball-Bracket-System-API",
-    "previewUrl": "https://clashplaner.uk.to/",
+    "previewUrl": "https://planer.mnky-js.com/",
     "featured": true
   },
   {
@@ -29,7 +29,7 @@
     },
     "description": "A website to manage and create paintball clashes",
     "sourceUrl": "https://gitlab.com/mnkyjs/Paintball-Bracket-System-SPA",
-    "previewUrl": "https://clashplaner.uk.to/",
+    "previewUrl": "https://planer.mnky-js.com/",
     "featured": true
   },
   {
