@@ -2,10 +2,8 @@
 layout: blog
 title: 'Building Inclusive Web Applications, A Comprehensive Guide to Accessibility'
 description: 'Building Accessible Web Apps for All. Learn How!'
-published: false
+published: true
 date: 2023-08-01T09:30:00.021Z
-slugs:
-    - ___UNPUBLISHED___lkh4ouom_OlWF30kvuWb2BjOLbt5rGKOeJpnPVJfj
 ---
 
 # Building Inclusive Web Applications: A Comprehensive Guide to Accessibility

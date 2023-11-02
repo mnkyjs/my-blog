@@ -10,8 +10,6 @@
 
 ### 🏠 [Homepage](https://mnky-js.com/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ea17e5b8-36d7-40b0-8acb-78640e72ba4a/deploy-status)](https://app.netlify.com/sites/mystifying-jones-041186/deploys)
-
 ## Install
 
 ```sh
